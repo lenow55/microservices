@@ -1,6 +1,6 @@
-# FROM golang:1.17-alpine AS cache
+FROM golang:1.17-alpine AS cache
 # AWS CodeBuild fails due to Docker's pull rate limit, using ECR.
-FROM public.ecr.aws/bitnami/golang:1.17 AS cache
+# FROM public.ecr.aws/bitnami/golang:1.17 AS cache
 WORKDIR /go/src/app
 COPY go.* ./
 COPY internal ./internal
